@@ -1,9 +1,10 @@
 {
-    "name" : "cn.com.spdbfl",
+    "name" : "spdbfl_RemoteUnderwriting",
     "appid" : "__UNI__C00BC39",
+    "id" : "__UNI__C00BC39",
     "description" : "",
     "versionName" : "1.0.0",
-    "versionCode" : "100",
+    "versionCode" : 100,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
@@ -16,9 +17,9 @@
             "autoclose" : true,
             "delay" : 0
         },
-		"compatible" : {
-		      "ignoreVersion": true //忽略弹窗
-		   },
+        "compatible" : {
+            "ignoreVersion" : false //忽略弹窗
+        },
         /* 模块配置 */
         "modules" : {},
         /* 应用发布信息 */
@@ -77,5 +78,5 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "3"
 }

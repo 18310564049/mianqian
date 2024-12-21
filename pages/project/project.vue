@@ -1,6 +1,9 @@
 <template>
 	<view class="project">
 		<scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y">
+			<view class="input">
+				<input class="project-input" focus placeholder="请输入项目名称/合同名称/主办客户经理" />
+			</view>
 			<view id="demo1" v-for="item in guessList" :key="item.id" class="scroll-view-item">
 				<view class="item-title">
 					<view class="item-image">
@@ -90,8 +93,26 @@
 	.project {
 		height: 100%;
 		.scroll-Y {
+			
 			margin: 30rpx;
 			height: calc(100% - 30rpx);
+			.input{
+				width: 690rpx; 
+				height: 78rpx;
+			background: #FFFFFF;
+			border-radius: 14rpx;
+			margin-bottom: 20rpx;
+			.project-input{
+				padding-left: 68rpx;
+				height: 78rpx;
+				
+				font-size: 28rpx;
+				color: #B6B8BC;
+				letter-spacing: 0;
+				font-weight: 400;
+				line-height: 78rpx;
+			}
+			}
 			.scroll-view-item {
 				height: 404rpx;
 				width: 690rpx;

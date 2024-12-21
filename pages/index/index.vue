@@ -28,6 +28,8 @@
 </template>
 
 <script>
+	var waitModule = uni.requireNativePlugin('WaitModule')
+	const modal = uni.requireNativePlugin('modal');
 	import {
 		getHomeBannerAPI
 	} from '@/services/home'
@@ -51,15 +53,48 @@
 				console.log("res", res)
 			},
 			login(){
+				modal.toast({
+					message: 1111,
+					duration: 1.5
+				});
 				console.log(1111)
-				uni.navigateTo({ url: `/pages/project/project?skuId=1111` })
+				let obj = {
+					"loginIp":'cloud.anychat.cn',
+					"loginPort":'8906',
+					"loginAppId":'3E04F084-E529-4FC1-8BCC-DC4B26AF87CA',
+					"sysID":'20',
+					"appId":'3E04F084-E529-4FC1-8BCC-DC4B26AF87CA',
+					"prodCode":'000',
+					"prodName":'222',
+					"productSubType":'333',
+					"busType":'33',
+					"busTypeName":'222',
+					"busSerialNumber":'123',
+					"busSerialNumberDesc":'666',
+					"roomNo":"1",
+					"cstMgrName":"11",
+					"cstMgrNo":"555",
+					"cstMgrOrg":"66",
+					"cstMgrOrgName":"cstMgrOrgName",
+					"custName":"custName"
+				}
+				
+				
+				waitModule.testAsyncFunc(obj,
+									(ret) => {
+										modal.toast({
+											message: ret,
+											duration: 1.5
+										});
+									})
+				// uni.navigateTo({ url: `/pages/project/project?skuId=1111` })
 			}
 			
 		}
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 	page {
 		background-color: #f7f7f7;
 		height: 100%;
