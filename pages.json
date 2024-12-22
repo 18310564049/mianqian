@@ -13,6 +13,13 @@
 				"navigationBarTitleText": "面签任务",
 				"background": "#FFFFFF"
 			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "面签任务",
+				"background": "#FFFFFF"
+			}
 		}
 	],
 	"globalStyle": {

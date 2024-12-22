@@ -2,9 +2,9 @@
 	<view class="project">
 		<scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y">
 			<view class="input">
-				<input class="project-input" focus placeholder="请输入项目名称/合同名称/主办客户经理" />
+			<image class="image" src="../../static/images/search.png"></image>	<input class="project-input" focus placeholder="请输入项目名称/合同名称/主办客户经理" />
 			</view>
-			<view id="demo1" v-for="item in guessList" :key="item.id" class="scroll-view-item">
+			<view  v-for="item in guessList" :key="item.id" class="scroll-view-item">
 				<view class="item-title">
 					<view class="item-image">
 						<image class="image" src="../../static/images/project.png" mode=""></image>
@@ -102,6 +102,15 @@
 			background: #FFFFFF;
 			border-radius: 14rpx;
 			margin-bottom: 20rpx;
+			position: relative;
+			
+			.image{
+				height: 38rpx;
+				width: 38rpx;
+				position: absolute;
+				top: 20rpx;
+				left: 20rpx;
+			}
 			.project-input{
 				padding-left: 68rpx;
 				height: 78rpx;
