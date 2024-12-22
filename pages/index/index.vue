@@ -64,19 +64,19 @@
 					"loginAppId":'3E04F084-E529-4FC1-8BCC-DC4B26AF87CA',
 					"sysID":'20',
 					"appId":'3E04F084-E529-4FC1-8BCC-DC4B26AF87CA',
-					"prodCode":'000',
+					"prodCode":'zhxfdk001',
 					"prodName":'222',
-					"productSubType":'333',
-					"busType":'33',
-					"busTypeName":'222',
-					"busSerialNumber":'123',
-					"busSerialNumberDesc":'666',
-					"roomNo":"1",
-					"cstMgrName":"11",
-					"cstMgrNo":"555",
-					"cstMgrOrg":"66",
-					"cstMgrOrgName":"cstMgrOrgName",
-					"custName":"custName"
+					"productSubType":'1',
+					"busType":'2',
+					"busTypeName":'综合消费贷款_1',
+					"busSerialNumber":'73aff778110941f399b165e3a9dd75b1',
+					"busSerialNumberDesc":'消费贷款',
+					"roomNo":"5141007",
+					"cstMgrName":"信贷_超管",
+					"cstMgrNo":"loan_super",
+					"cstMgrOrg":"bairui",
+					"cstMgrOrgName":"佰锐科技商户",
+					"custName":"祖永园"
 				}
 				
 				
