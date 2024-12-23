@@ -53,6 +53,14 @@
             "sdkConfigs" : {},
             "splashscreen" : {
                 "useOriginalMsgbox" : true
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "",
+                    "xhdpi" : "",
+                    "xxhdpi" : "",
+                    "xxxhdpi" : ""
+                }
             }
         }
     },

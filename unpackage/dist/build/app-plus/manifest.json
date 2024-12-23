@@ -42,11 +42,19 @@
     "nvueStyleCompiler": "uni-app",
     "compilerVersion": 3,
     "compatible": {
-      "ignoreVersion": false
+      "ignoreVersion": true
     },
     "distribute": {
       "splashscreen": {
         "useOriginalMsgbox": true
+      },
+      "icons": {
+        "android": {
+          "hdpi": "",
+          "xhdpi": "",
+          "xxhdpi": "",
+          "xxxhdpi": ""
+        }
       },
       "google": {
         "permissions": [

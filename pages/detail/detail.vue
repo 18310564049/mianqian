@@ -17,19 +17,103 @@
 					</view>
 					<view class="item-content-row">
 						<view class="item-content-row-left">承租人：</view>
-						<view class="item-content-row-right">蓝帆医疗回租项目蓝帆医疗回租项目蓝帆医疗回租项目 </view>
+						<view class="item-content-row-right">疗回租项目蓝帆医疗回租项目 </view>
 					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">帆医疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">医疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+				</view>
+			</view>
+			<view   class="scroll-view-item">
+				<view class="item-title" @click="toogle(1)">
+					<text class="span">合同基本信息</text>
+					<view class="icon">
+						<image class="image" v-if="item1" src="../../static/images/up.png"></image>
+						<image class="image" v-else="!item1" src="../../static/images/down.png"></image>
+					</view>
+				</view>
+				<view class="item-content" v-show='item1'>
 					<view class="item-content-row">
 						<view class="item-content-row-left">承租人：</view>
 						<view class="item-content-row-right">蓝帆医疗回租项目蓝帆医疗回租项目蓝帆医疗回租项目 </view>
 					</view>
 					<view class="item-content-row">
 						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">帆医疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">医疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+				</view>
+			</view>
+			<view   class="scroll-view-item">
+				<view class="item-title" @click="toogle(1)">
+					<text class="span">合同基本信息</text>
+					<view class="icon">
+						<image class="image" v-if="item1" src="../../static/images/up.png"></image>
+						<image class="image" v-else="!item1" src="../../static/images/down.png"></image>
+					</view>
+				</view>
+				<view class="item-content" v-show='item1'>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
 						<view class="item-content-row-right">蓝帆医疗回租项目蓝帆医疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">帆医疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">医疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+				</view>
+			</view>
+			<view   class="scroll-view-item">
+				<view class="item-title" @click="toogle(1)">
+					<text class="span">合同基本信息</text>
+					<view class="icon">
+						<image class="image" v-if="item1" src="../../static/images/up.png"></image>
+						<image class="image" v-else="!item1" src="../../static/images/down.png"></image>
+					</view>
+				</view>
+				<view class="item-content" v-show='item1'>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">蓝帆医疗回租项目蓝帆医疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">帆医疗回租项目蓝帆医疗回租项目 </view>
+					</view>
+					<view class="item-content-row">
+						<view class="item-content-row-left">承租人：</view>
+						<view class="item-content-row-right">医疗回租项目蓝帆医疗回租项目 </view>
 					</view>
 				</view>
 			</view>
 		</scroll-view>
+		<view  class="bottom">
+			<button class="bottom_button">开始面签</button>
+		</view>
 	</view>
 </template>
 
@@ -85,11 +169,10 @@
 	}
 	.detail {
 		height: 100%;
+		position: relative;
 		.scroll-Y {
-			
 			margin: 30rpx ;
-			
-			height: calc(100% - 30rpx);
+			height: calc(100% - 190rpx);
 		
 			.scroll-view-item {
 				width: 690rpx;
@@ -123,9 +206,12 @@
 				.item-content {
 					box-sizing: border-box;
 					width: 634rpx;
+					border-top: 1px solid #E6E6E6;
 					.item-content-row{
 						margin-bottom: 4rpx;
 						display: flex;
+						padding-top: 10rpx;
+						padding-bottom: 10rpx;
 						justify-content: space-between;
 						.item-content-row-left{
 							font-size: 28rpx;
@@ -145,6 +231,28 @@
 						}
 					}
 				}
+			}
+			
+			
+		}
+		.bottom{
+			position: absolute;
+			bottom: 0rpx;
+			height: 180rpx;
+			background-color: #fff;
+			width: 100%;
+			text-align: center;
+			.bottom_button{
+				margin-top: 30rpx;
+				width: 630rpx;
+				height: 90rpx;
+				background: #0078FF;
+				border-radius: 12rpx;
+				font-size: 32rpx;
+				color: #FFFFFF;
+				text-align: center;
+				line-height: 90rpx;
+				font-weight: 500;
 			}
 		}
 	}

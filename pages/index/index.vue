@@ -7,14 +7,14 @@
 					<image class="user-img"  src="../../static/images/user.png"></image><text class="user-span">账户</text>
 				</view>
 				<view class="user-input">
-					<input class="uni-input" focus placeholder="请输入用户名" />
+					<input class="input" focus placeholder="请输入用户名" v-model="account" />
 				</view>
 				<view class="password">
 					<image class="password-img"  src="../../static/images/password.png"></image>
 					<text class="password-span">密码</text>
 				</view>
 				<view class="password-input">
-					<input class="uni-input" focus placeholder="请输入密码" />
+					<input class="input" focus placeholder="请输入密码" v-model="password" />
 				</view>
 				<view class="button">
 					<button @click="login">登录</button>
@@ -28,31 +28,36 @@
 </template>
 
 <script>
-	var waitModule = uni.requireNativePlugin('WaitModule')
-	const modal = uni.requireNativePlugin('modal');
+	
 	import {
-		getHomeBannerAPI
+		loginApi
 	} from '@/services/home'
 	import CustomNavbar from './components/CustomNavbar.vue'
 	export default {
 		data() {
 			return {
-				title: 'Hello',
-				src:"https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/shuijiao.jpg"
+				password: '',
+				password:""
 			}
 		},
 		components: {
 			CustomNavbar
 		},
 		onLoad() {
-			this.getHomeBannerData()
+			this.login()
 		},
 		methods: {
-			async getHomeBannerData() {
-				const res = await getHomeBannerAPI()
+			async login() {
+				const res = await loginApi({
+					appName:"cl2015",
+					account:"puyin",
+					password:"Puyin@20241219sql",
+				})
 				console.log("res", res)
 			},
-			login(){
+			login1(){
+				var waitModule = uni.requireNativePlugin('WaitModule')
+				const modal = uni.requireNativePlugin('modal');
 				modal.toast({
 					message: 1111,
 					duration: 1.5
@@ -143,10 +148,15 @@
 			}
 			.user-input{
 					margin-top: 36rpx;
-					font-size: 32rpx;
-					color: #AEAEAE;
-					line-height: 44rpx;
-					font-weight: 400;
+					height: 66rpx;
+					border-bottom: 1px solid #E7E7E7;;
+					.input{
+						font-size: 32rpx;
+						color: #AEAEAE;
+						line-height: 44rpx;
+						font-weight: 400;
+					}
+					
 				}
 			.password{
 				margin-top: 69rpx;
@@ -171,11 +181,15 @@
 				}
 			}
 			.password-input{
-				font-size: 32rpx;
-				color: #AEAEAE;
-				line-height: 44rpx;
-				font-weight: 400;
+				height: 66rpx;
+				border-bottom: 1px solid #E7E7E7;;
 				margin-top: 36rpx;
+				.input{
+					font-size: 32rpx;
+					color: #AEAEAE;
+					line-height: 44rpx;
+					font-weight: 400;
+				}
 			}
 				button{
 					margin-top: 90rpx;

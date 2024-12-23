@@ -11,14 +11,14 @@
  */
 
 
-const baseURL = 'https://pcapi-xiaotuxian-front-devtest.itheima.net'
+const baseURL = 'https://10.116.3.44:3306'
 
 // 添加拦截器
 const httpInterceptor = {
   // 拦截前触发
   invoke(options) {
     // 1. 非 http 开头需拼接地址
-    if (!options.url.startsWith('http')) {
+    if (!options.url.startsWith('https')) {
       options.url = baseURL + options.url
     }
     // 2. 请求超时, 默认 60s
